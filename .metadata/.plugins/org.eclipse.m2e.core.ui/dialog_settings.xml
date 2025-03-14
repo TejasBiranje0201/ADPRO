@@ -62,6 +62,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\class\Projects\ADPRO\adpro_backend"/>
+			<item value="D:\class\Projects\ADPRO\tejas"/>
 			<item value="D:\class\Projects\ADPRO\demo"/>
 			<item value="D:\class\Projects\ADPRO\adpro"/>
 		</list>
@@ -73,5 +75,9 @@
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 </section>
