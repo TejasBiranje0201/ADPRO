@@ -1,11 +1,13 @@
 package com.adpro.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,17 +15,23 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name="Stats")
+@Table(name="E_medias")
+@ToString
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@ToString
-public class State {
+public class E_media {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
+	private long contact;
+	private String address;
+	private String gstNo;
 	
-	
-
+	@ManyToOne
+	@JoinColumn(name="stateId")
+	@JsonIgnoreProperties(value = {"stateId"},allowSetters = true)
+	private State state;
 }
