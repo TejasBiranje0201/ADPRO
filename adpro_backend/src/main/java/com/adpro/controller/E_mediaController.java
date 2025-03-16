@@ -90,6 +90,6 @@ public class E_mediaController {
 	public ResponseEntity<Void> deleteEmedia(@PathVariable int id){
 		
 		e_mediaService.delete(id);
-		return new ResponseEntity<Void>(HttpStatus.OK);
+		return new ResponseEntity<Void>(HttpStatus.OK);  
 	}
 }
