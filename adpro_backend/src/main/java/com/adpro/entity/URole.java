@@ -11,16 +11,17 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name="Roles")
-@Data
-@ToString
+@Table(name="Uroles")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Role {
-    
+@Data
+@ToString
+public class Urole {
+	
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	
+
 }
