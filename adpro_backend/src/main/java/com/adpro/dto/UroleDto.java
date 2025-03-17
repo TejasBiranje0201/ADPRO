@@ -3,9 +3,9 @@ package com.adpro.dto;
 import lombok.Data;
 
 @Data
-public class RoleDto {
+public class UroleDto {
 
 	
-	private String name;
-
+	
+	 private String name;
 }
