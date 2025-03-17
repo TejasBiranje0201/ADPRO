@@ -9,6 +9,8 @@ public class AdproBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AdproBackendApplication.class, args);
 		System.out.println(" Project is Online.....!");
+		System.out.println("Application Running...!");
 	}
 
 }
+ 
