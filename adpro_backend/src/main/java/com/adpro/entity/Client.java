@@ -2,7 +2,6 @@ package com.adpro.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,27 +13,32 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
 @Entity
-@Table(name="ModuleMenus")
+@Table(name = "Clients")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @ToString
-public class Modulemenu {
+public class Client {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@ManyToOne
-	@JoinColumn(name="moduleid")
-	@JsonIgnoreProperties(value = {"moduleId"}, allowSetters = true)
-	private Module module;
+	private String name;
+	private long contact;
+	private String address;
+	private String gstno;
 	
 	@ManyToOne
-	@JoinColumn(name="menuId")
-	@JsonIgnoreProperties(value = {"menuId"}, allowSetters = true)
-	private Menu menu;
+	@JoinColumn(name="agencyId")
+	@JsonIgnoreProperties(value= {"agencyId"},allowSetters = true)
+	private Agency agency;
 	
-	
+	@ManyToOne
+	@JoinColumn(name = "stateId")
+	@JsonIgnoreProperties(value = {"stateId"},allowGetters = true)
+	private State state;
 	
 
 }

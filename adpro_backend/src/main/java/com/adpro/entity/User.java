@@ -1,8 +1,9 @@
-package com.adpro.entity;
+ package com.adpro.entity;
+
+import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,27 +15,30 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
 @Entity
-@Table(name="ModuleMenus")
+@Table(name="users")
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @ToString
-public class Modulemenu {
+@Data
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private String email;
+	private String password;
+	private String name;
+	private Date createdon;
+
 	@ManyToOne
-	@JoinColumn(name="moduleid")
-	@JsonIgnoreProperties(value = {"moduleId"}, allowSetters = true)
-	private Module module;
-	
+	@JoinColumn(name="agencyId")
+	@JsonIgnoreProperties(value = {"agencyId"},allowSetters = true)
+	private Agency agency;
 	@ManyToOne
-	@JoinColumn(name="menuId")
-	@JsonIgnoreProperties(value = {"menuId"}, allowSetters = true)
-	private Menu menu;
-	
-	
-	
+	@JoinColumn(name="uroleId")
+	@JsonIgnoreProperties(value= {"uroleId"},allowSetters = true)
+	private Urole urole;
+
 
 }
