@@ -1,4 +1,6 @@
-           package com.adpro.entity;
+package com.adpro.entity;
+
+import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -15,20 +17,20 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name = "Clients")
+@Table(name="Workschedules")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Client {
-	
+public class Workschedule {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String name;
-	private long contact;
-	private String address;
-	private String gstno;
+	private String title;
+	private String description;
+	private Date wdate;
+	private String status;
 	
 	@ManyToOne
 	@JoinColumn(name="agencyId")
@@ -36,9 +38,9 @@ public class Client {
 	private Agency agency;
 	
 	@ManyToOne
-	@JoinColumn(name = "stateId")
-	@JsonIgnoreProperties(value = {"stateId"},allowGetters = true)
-	private State state;
+	@JoinColumn(name="userId")
+	@JsonIgnoreProperties(value= {"userId"},allowSetters =true)
+	private User user;
 	
-
+	
 }

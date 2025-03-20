@@ -76,7 +76,7 @@ public class ClientController {
 		
 		}
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Client>deleteById(@PathVariable("id") int id){
+	public ResponseEntity<Void>deleteById(@PathVariable("id") int id){
 		
 		Client cilent= clientService.getById(id);
 		if(cilent==null) {
