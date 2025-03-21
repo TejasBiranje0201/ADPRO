@@ -1,8 +1,6 @@
 package com.adpro.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
