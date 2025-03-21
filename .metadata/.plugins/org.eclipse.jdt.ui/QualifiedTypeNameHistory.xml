@@ -16,9 +16,6 @@
     <fullyQualifiedTypeName name="com.adpro.dto.UserDto"/>
     <fullyQualifiedTypeName name="com.adpro.entity.Urole"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="com.adpro.repository.ClientRepository"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.adpro.entity.State"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.adpro.entity.WorkSchedule"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
 </qualifiedTypeNameHistroy>
