@@ -32,6 +32,7 @@ public class ModuleController {
 	public ResponseEntity<Module>save(@RequestBody ModuleDto moduleDto){
 		
 		Module modules= new Module();
+		
 		modules.setName(moduleDto.getName());
 		
 		Module savemodule = moduleService.save(modules);
