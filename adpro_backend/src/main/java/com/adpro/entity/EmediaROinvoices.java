@@ -72,4 +72,9 @@ public class EmediaROinvoices {
 	private E_media e_media;
 	
 //	gst Pending
+	
+	@ManyToOne
+	@JoinColumn(name = "gstId")
+	@JsonIgnoreProperties(value = {"gstId"},allowSetters = true)
+	private Gst gst;
 }

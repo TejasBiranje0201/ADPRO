@@ -53,4 +53,9 @@ public class PmediaRO_Invoices {
 	private Pmedia_ROs pmedia_ROs;
 	
 //	gst pending
+	
+	@ManyToOne
+	@JoinColumn(name = "gstId")
+	@JsonIgnoreProperties(value = {"gstId"},allowSetters = true)
+	private Gst gst;
 }

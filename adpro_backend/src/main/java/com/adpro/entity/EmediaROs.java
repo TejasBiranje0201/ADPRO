@@ -68,5 +68,10 @@ public class EmediaROs {
 	
 //	gstPending
 	
+	@ManyToOne
+	@JoinColumn(name = "gstId")
+	@JsonIgnoreProperties(value = {"gstId"})
+	private Gst gst;
+	
 	
 }

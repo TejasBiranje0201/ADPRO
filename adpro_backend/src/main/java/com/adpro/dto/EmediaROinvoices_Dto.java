@@ -38,5 +38,5 @@ public class EmediaROinvoices_Dto {
 	private int emediaroId;
 	private int clientId;
 	private int emediaId;
-	
+	private int gstId;
 }

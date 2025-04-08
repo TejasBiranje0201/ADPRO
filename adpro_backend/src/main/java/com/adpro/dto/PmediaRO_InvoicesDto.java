@@ -26,4 +26,5 @@ public class PmediaRO_InvoicesDto {
 	
 	private int agencyId;
 	private int pmediaRO_Id;
+	private int gstId;
 }

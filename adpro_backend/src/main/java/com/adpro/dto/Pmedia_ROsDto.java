@@ -37,4 +37,5 @@ public class Pmedia_ROsDto {
 	private int agencyId;
 	private int clientId;
 	private int pMediaId;
+	private int gstId;
 }

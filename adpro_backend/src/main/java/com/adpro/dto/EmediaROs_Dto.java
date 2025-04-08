@@ -36,5 +36,6 @@ public class EmediaROs_Dto {
 	private int agencyId;
 	private int clientId;
 	private int emediaId;
+	private int gstId;
 	
 }
