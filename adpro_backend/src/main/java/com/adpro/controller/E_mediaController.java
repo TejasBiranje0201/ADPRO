@@ -84,7 +84,7 @@ public class E_mediaController {
 		
 		E_media updatE_media = e_mediaService.save(existingE_media);
 		
-		return new ResponseEntity<E_media>(updatE_media,HttpStatus.CREATED);
+		return new ResponseEntity<E_media>(updatE_media,HttpStatus.CREATED); 
 		
 	}
 	

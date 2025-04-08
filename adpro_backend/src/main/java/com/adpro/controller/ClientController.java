@@ -66,28 +66,33 @@ public class ClientController {
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Client>getByid(@PathVariable("id") int id){
+	public ResponseEntity<Client>getByid(@PathVariable int id){
 		
-		Client client= clientService.getById(id);
+		Client client = clientService.getById(id);
 		
-		if(client== null) {
-			return new ResponseEntity<>(client,HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<>(client,HttpStatus.FOUND);
-		
+		return new ResponseEntity<Client>(client,HttpStatus.OK);
+//		Client client= clientService.getById(id);
+//		
+//		if(client== null) {
+//			return new ResponseEntity<>(client,HttpStatus.NOT_FOUND);
+//		}
+//		return new ResponseEntity<>(client,HttpStatus.FOUND);
+//		
 		}
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Void>deleteById(@PathVariable("id") int id){
+	public ResponseEntity<Void>deleteById(@PathVariable int id){
 		
-		Client cilent= clientService.getById(id);
-		if(cilent==null) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		}
-		return new ResponseEntity<>(HttpStatus.MOVED_PERMANENTLY);
+		clientService.deleteById(id);
+		return new ResponseEntity<Void>(HttpStatus.OK);
+//		Client cilent= clientService.getById(id);
+//		if(cilent==null) {
+//			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//		}
+//		return new ResponseEntity<>(HttpStatus.MOVED_PERMANENTLY);
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Client>update(@PathVariable("id") int id,@RequestBody ClientDto clientDto){
+	public ResponseEntity<Client>update(@PathVariable int id,@RequestBody ClientDto clientDto){
 		Client client=clientService.getById(id);
 		
 		if(client==null) {
@@ -95,9 +100,11 @@ public class ClientController {
 		}
 		Agency agency=agencyService.getById(clientDto.getAgencyId());
 		client.setAgency(agency);
+		
 		client.setName(clientDto.getName());
 		client.setContact(clientDto.getContact());
 		client.setAddress(clientDto.getAddress());
+		
 		State state = stateService.getByid(clientDto.getStateId());
 		client.setState(state);
 		client.setGstno(clientDto.getGstno());
