@@ -72,7 +72,7 @@ public class WorkScheduleController {
 		workSchedule.setUser(user);
 		
 		WorkSchedule saveWorkSchedule = workScheduleService.save(workSchedule);
-		return new ResponseEntity<>(workSchedule, HttpStatus.CREATED);
+		return new ResponseEntity<>(saveWorkSchedule, HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/{id}")
@@ -94,7 +94,7 @@ public class WorkScheduleController {
 			workSchedule.setUser(user);
 			
 			WorkSchedule saveWorkSchedule = workScheduleService.save(workSchedule);
-			return new ResponseEntity<>(workSchedule, HttpStatus.CREATED);
+			return new ResponseEntity<>(saveWorkSchedule, HttpStatus.CREATED);
 		
 
 	}
